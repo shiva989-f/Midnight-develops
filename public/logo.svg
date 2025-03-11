@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1016" height="1006" viewBox="0 0 1016 1006">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #6639a5;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-2, .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        stroke: #6639a5;
+        stroke-miterlimit: 10;
+        stroke-width: 38px;
+      }
+    </style>
+  </defs>
+  <g id="Layer_5" data-name="Layer 5">
+    <rect class="cls-1" width="1016" height="1006" rx="178.34" ry="178.34"/>
+  </g>
+  <g id="Layer_2" data-name="Layer 2">
+    <rect class="cls-2" x="267.93" y="322.09" width="480.14" height="480.14" transform="translate(-248.71 523.86) rotate(-45)"/>
+    <rect class="cls-2" x="271.52" y="266.52" width="472.95" height="472.95" transform="translate(-206.88 506.54) rotate(-45)"/>
+    <g id="Layer_4" data-name="Layer 4">
+      <rect class="cls-3" x="311.17" y="306.17" width="393.67" height="393.67" transform="translate(-206.88 506.54) rotate(-45)"/>
+    </g>
+    <rect class="cls-1" x="400.62" y="395.62" width="214.76" height="214.76" transform="translate(-206.88 506.54) rotate(-45)"/>
+    <g id="Layer_3" data-name="Layer 3">
+      <rect class="cls-2" x="456.39" y="451.39" width="103.22" height="103.22" transform="translate(-206.88 506.54) rotate(-45)"/>
+    </g>
+  </g>
+</svg>

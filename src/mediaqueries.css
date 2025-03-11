@@ -1,0 +1,257 @@
+@media (max-width: 950px) {
+  #home nav .nav-links {
+    /* display: none; */
+    position: absolute;
+    top: -100rem;
+  }
+
+  #home nav .nav-links.show {
+    width: 100%;
+    height: 50%;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    z-index: 10;
+    padding: 2rem 0;
+    /* Bounce animation copied from chrome inspect 😋 */
+    transition: all 1s linear(0 0%, 0 2.27%, 0.02 4.53%, 0.04 6.8%, 0.06 9.07%, 0.1 11.33%, 0.14 13.6%, 0.25 18.15%, 0.39 22.7%, 0.56 27.25%, 0.77 31.8%, 1 36.35%, 0.89 40.9%, 0.85 43.18%, 0.81 45.45%, 0.79 47.72%, 0.77 50%, 0.75 52.27%, 0.75 54.55%, 0.75 56.82%, 0.77 59.1%, 0.79 61.38%, 0.81 63.65%, 0.85 65.93%, 0.89 68.2%, 1 72.7%, 0.97 74.98%, 0.95 77.25%, 0.94 79.53%, 0.94 81.8%, 0.94 84.08%, 0.95 86.35%, 0.97 88.63%, 1 90.9%, 0.99 93.18%, 0.98 95.45%, 0.99 97.73%, 1 100%);
+    background: var(--secondary);
+  }
+
+  #home nav .menu {
+    display: block;
+  }
+
+  #our-team .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  #our-team .team-member .person {
+    width: 8.5rem;
+  }
+}
+
+@media (max-width: 900px) {
+  #home .content h1 > div {
+    font-size: 3.5rem;
+  }
+
+  #home .content h1 > div .h1-logo {
+    width: 40px;
+  }
+
+  #about .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 3rem;
+  }
+
+  #about .about-text {
+    width: 80%;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 750px) {
+  #home .content h1 > div {
+    font-size: 3rem;
+  }
+  #home .content h1 > div .h1-logo {
+    width: 2rem;
+  }
+
+  #our-team .team-member .person {
+    width: 7rem;
+  }
+
+  #our-team .team-member .arc {
+    width: 2.5rem;
+  }
+
+  #our-team .vishal .name {
+    left: -4rem;
+  }
+
+  #our-team .pankaj .name {
+    right: -2rem;
+  }
+
+  #our-team .vishal .name h3 {
+    transform: translateX(-1.6rem);
+  }
+
+  #our-team .vishal .name h4 {
+    transform: translateX(-1.6rem);
+  }
+
+  #our-team .shiva .name h3,
+  #our-team .pankaj .name h3 {
+    transform: translateX(1rem);
+  }
+
+  #our-team .shiva .name h4,
+  #our-team .pankaj .name h4 {
+    transform: translateX(1rem);
+  }
+
+  #contact .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  #contact .content .left {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    order: 2;
+  }
+
+   #contact .content .left h1  {
+    text-align: center;
+   }
+
+  #contact .content .left .contact-details {
+    width: 100%;
+    justify-content: center;
+  }
+
+  #contact .content .left .social-icons-box {
+    justify-content: center;
+  }
+
+  #contact .content .right {
+    width: 100%;
+    order: 1;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .heading {
+    font-size: 3rem;
+  }
+  #home nav .logo {
+    gap: 0.5rem;
+  }
+
+  #home .content h1 > div {
+    font-size: 3rem;
+  }
+
+  #home .content h1 > div .h1-logo {
+    width: 2rem;
+  }
+
+  #home nav .logo img {
+    width: 30px;
+  }
+
+  #home nav .logo .logo-text {
+    font-size: 1rem;
+  }
+
+  nav .menu {
+    font-size: 1.4rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+  }
+
+  #our-team .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 4rem;
+  }
+
+  #our-team .vishal,
+  #our-team .pankaj {
+    align-self: center;
+  }
+
+  #our-team .pankaj .name {
+    right: 0;
+    left: -8rem;
+  }
+
+  #our-team .pankaj .name .arc {
+    transform: scaleX(1);
+    rotate: -4deg;
+  }
+
+  #our-team .pankaj .name h3 {
+    transform: translateX(-0.5rem);
+  }
+
+  #our-team .pankaj .name h4 {
+    transform: translateX(-0.5rem);
+  }
+}
+
+@media (max-width: 400px) {
+  #home nav .nav-links li a {
+    font-size: 1rem;
+  }
+
+  #home .content h1 > div {
+    font-size: 2.5rem;
+  }
+
+  #home .content .intro {
+    font-size: 0.8rem;
+  }
+
+  #home .content .intro > div {
+    font-size: 0.8rem;
+  }
+
+  #about .about-text {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  #about .image {
+    width: 6rem;
+    height: 10rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .container {
+    padding: 0.8rem 1.2rem;
+  }
+}
+
+@media (max-width: 390px) {
+  #home nav .logo .logo-text {
+    font-size: 0.9rem;
+  }
+
+  nav .menu {
+    font-size: 1.2rem;
+  }
+
+  .container {
+    padding: 0.5rem 1rem;
+  }
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  }
+}

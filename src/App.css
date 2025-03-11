@@ -1,0 +1,429 @@
+#home nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#home nav .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+#home nav .logo img {
+  width: 40px;
+}
+
+#home nav .logo .logo-text {
+  font-family: anton;
+  font-size: 1.5rem;
+}
+
+#home nav .nav-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.25rem;
+}
+
+#home nav .nav-links li {
+  list-style: none;
+}
+
+#home nav .nav-links li a {
+  transition: all 0.4s ease-in-out;
+  text-decoration: none;
+}
+
+nav .menu {
+  font-size: 2rem;
+  display: none;
+  z-index: 50;
+}
+
+.nav-links.show .active {
+  color: var(--white);
+}
+
+.active {
+  color: var(--secondary);
+  font-family: aileron_black;
+}
+
+#home .content h1 div {
+  font-family: aileron_black;
+  font-size: 5rem;
+  text-align: center;
+}
+
+#home .content h1 div span {
+  display: inline-block;
+  width: auto;
+  font-family: aileron_black;
+  clip-path: polygon(0% 0%, 100% 20.8%, 100% 100%, 0% 100%);
+  background-color: var(--secondary);
+}
+
+#home .content h1 div .h1-logo {
+  width: 50px;
+  rotate: 25deg;
+}
+
+#home .content .intro {
+  margin-top: 2rem;
+  text-align: center;
+  color: var(--gray);
+}
+
+#home .content .intro div {
+  color: var(--gray);
+}
+
+#home .content .btn > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+/* ---------------------------------------- About us ---------------------------------------- */
+
+.about-text {
+  width: 40%;
+  font-size: 1.25rem;
+  line-height: 2rem;
+  text-align: center;
+}
+
+.image {
+  width: 8rem;
+  height: 12rem;
+  background-color: #d9d9d9;
+  border-radius: 1rem;
+}
+
+.about-content {
+  position: relative;
+  z-index: 10;
+}
+
+.about-content::before {
+  position: absolute;
+  content: "";
+  background: url(/logo_no_bg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 70vw;
+  height: 70vh;
+  opacity: 0.1;
+  z-index: -5;
+}
+
+/* ---------------------------------------- Our Team ---------------------------------------- */
+
+#our-team .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+
+#our-team .team-member {
+  position: relative;
+}
+
+#our-team .team-member .person {
+  width: 12rem;
+  border-radius: 20rem;
+}
+
+#our-team .team-member .name {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  bottom: 6rem;
+}
+
+#our-team .team-member .arc {
+  width: 4rem;
+  rotate: -10deg;
+}
+
+#our-team .team-member .name h3 {
+  color: var(--secondary);
+}
+
+#our-team .vishal,
+#our-team .pankaj {
+  align-self: flex-end;
+}
+
+#our-team .vishal .name {
+  left: -4rem;
+}
+
+#our-team .shiva .name,
+#our-team .pankaj .name {
+  right: -3rem;
+}
+
+#our-team .vishal .name h3 {
+  transform: translateX(-2rem);
+}
+
+#our-team .vishal .name h4 {
+  transform: translateX(-2rem);
+}
+
+#our-team .shiva .name h3,
+#our-team .pankaj .name h3 {
+  transform: translateX(1.5rem);
+}
+
+#our-team .shiva .name h4,
+#our-team .pankaj .name h4 {
+  transform: translateX(1.5rem);
+}
+
+#our-team .shiva .name .arc,
+#our-team .pankaj .name .arc {
+  transform: scaleX(-1);
+  rotate: 4deg;
+}
+
+/* ---------------------------------------- Mockup ---------------------------------------- */
+
+#mockup .content img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* ---------------------------------------- Contact us ---------------------------------------- */
+
+#contact .content div {
+  width: 50%;
+}
+
+#contact .content .left {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-direction: column;
+  gap: clamp(2rem, 3rem, 5rem);
+}
+
+#contact .left .contact-details-container {
+  width: 100%;
+}
+
+#contact .content .left h1 {
+  font-size: 3rem;
+}
+
+#contact .content .left h1 span {
+  color: var(--secondary);
+}
+
+#contact .content .left .contact-details {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: clamp(0.5rem, 1rem, 2rem);
+  margin: 1rem 0;
+}
+
+#contact .content .left .contact-details .icon {
+  font-size: 1.5rem;
+}
+
+#contact .content .left .social-icons-box{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 3rem;
+  font-size: 1.5rem;
+}
+
+#contact .content .left .social-icons:hover {
+  transform: translateY(-5px);
+  transition: all .3s ease-in-out;
+  color: var(--secondary);
+}
+
+#contact .right form {
+  background: var(--white);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+#contact .right form h4 {
+  color: var(--secondary);
+}
+
+#contact .right .options {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+  gap: 1rem;
+  border: 1px solid var(--gray);
+  padding: .5rem;
+  border-radius: 1rem;
+}
+
+#contact .right .capsule-checkbox {
+  width: fit-content;
+}
+
+#contact .right .capsule-checkbox input {
+  display: none;
+}
+
+#contact .right .capsule-checkbox label {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 20rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s;
+  color: var(--gray);
+  border: 1px solid var(--gray);
+  background: transparent;
+}
+
+/* Change background on selection */
+#contact .right .capsule-checkbox input:checked + label {
+  background: var(--secondary);
+  color: var(--white);
+}
+
+#contact .right .input-box {
+  width: 100%;
+  position: relative;
+  margin: 1rem 0;
+}
+
+#contact .right .input-box label {
+  position: absolute;
+  top: 50%;
+  left: 0.8rem;
+  transform: translateY(-50%);
+  color: var(--gray);
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+#contact .right .input-box input {
+  width: 100%;
+  border-radius: 4rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: 1px solid var(--gray);
+  background-color: transparent;
+  outline: none;
+  color: var(--black);
+}
+
+#contact .right .input-box input:focus {
+  border: 2px solid var(--secondary);
+}
+
+/* If input is focused and there is value then apply this css on label if input is not focused or value is not valid or empty then it will not apply */
+#contact .right .input-box input:focus + label,
+#contact .right .input-box input:valid + label {
+  top: 0%;
+  font-size: 0.8rem;
+  background: var(--white);
+  padding: 0 0.6rem;
+}
+
+#contact .right .textarea-box {
+  width: 100%;
+  position: relative;
+  margin: 1rem 0;
+}
+
+#contact .right .textarea-box label {
+  position: absolute;
+  top: 50%;
+  left: 0.8rem;
+  transform: translateY(-50%);
+  color: var(--gray);
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+#contact .right .textarea-box textarea {
+  width: 100%;
+  height: 6rem;
+  resize: none;
+  border-radius: 1rem;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border: 1px solid var(--gray);
+  background-color: transparent;
+  outline: none;
+  color: var(--black);
+}
+
+#contact .right .textarea-box textarea::-webkit-scrollbar {
+  display: none;
+}
+
+#contact .right .textarea-box textarea:focus {
+  border: 2px solid var(--secondary);
+}
+
+#contact .right .textarea-box textarea:focus ~ label,
+#contact .right .textarea-box textarea:valid ~ label {
+  top: 0%;
+  font-size: 0.8rem;
+  background: var(--white);
+  padding: 0 0.6rem;
+}
+
+#contact .right #submit-btn {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 4rem;
+  font-size: 1rem;
+  background: var(--secondary);
+  outline: none;
+  border: none;
+  color: var(--white);
+}
+
+#contact .right #submit-btn:disabled {
+  cursor: not-allowed;
+  background: #9356e9;
+}
+
+#footer {
+  padding: 1rem 1rem;
+  background: var(--secondary);
+}
+
+#footer h2 {
+  text-align: center;
+}
+
+#footer p {
+  margin-top: .5rem;
+  text-align: center;
+  font-size: .8rem;
+}
+
+#footer .copyright {
+  text-align: center;
+  opacity: .7;
+  font-size: .7rem;
+}
