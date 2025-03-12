@@ -1,10 +1,28 @@
 import { FaWhatsapp } from 'react-icons/fa'
 import Navbar from './Navbar';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+import { useRef } from 'react';
 
 const Home = () => {
+  const homeContainer = useRef()
+
+  useGSAP(()=> {
+    gsap.from("#home .content h1", {
+      x: -1000,
+      opacity: 0,
+      duration: .8,
+    })
+
+    gsap.from("#home .content .intro", {
+      x: 1000,
+      opacity: 0,
+      duration: .8,
+    })
+  })
 
   return (
-    <section className="container" id='home'>
+    <section ref={homeContainer} className="container" id='home'>
       <Navbar />
       <div className="content display-center flex-column">
         <h1><div>The Best <span>Web</span></div> <div>Development <img className='h1-logo' src='/logo.svg' alt='Logo' /> Agency.</div></h1>

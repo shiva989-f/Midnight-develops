@@ -1,6 +1,49 @@
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 import React from 'react'
 
 const Services = () => {
+    useGSAP(() => {
+        gsap.fromTo(
+            "#services h1",
+            { y: -30, opacity: 0 },
+            {
+                y: 0, opacity: 1, duration: .8,
+                scrollTrigger: {
+                    trigger: "#services h1",
+                    scroller: window,
+                    start: "top 70%",
+                    toggleActions: "restart none none reverse",
+                }
+            }
+        );
+
+        gsap.fromTo(
+            "#services .grid .gradient-border-box",
+            { x: -100, opacity: 0 },
+            {
+                x: 0, opacity: 1, duration: .8, stagger: .15,
+                scrollTrigger: {
+                    trigger: "#services .grid .gradient-border-box",
+                    scroller: window,
+                    start: "top 80%",
+                    toggleActions: "restart none none reverse",
+                }
+            }
+        );
+
+        // Hover animation using GSAP
+        document.querySelectorAll(".gradient-border-box").forEach((box) => {
+            box.addEventListener("mouseenter", () => {
+                gsap.to(box, { scale: 1.1, duration: 0.3 });
+            });
+
+            box.addEventListener("mouseleave", () => {
+                gsap.to(box, { scale: 1, duration: 0.3 });
+            });
+        });
+
+    });
   return (
       <section className="container" id='services'>
           <div className='display-center'><h1 className='text-gradient heading'>OUR SERVICES</h1></div>

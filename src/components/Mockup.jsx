@@ -1,11 +1,53 @@
-import React from 'react'
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const Mockup = () => {
+  useGSAP(() => {
+    gsap.fromTo(
+      "#mockup h1",
+      { y: -30, opacity: 0 },
+      {
+        y: 0, opacity: 1, duration: .8,
+        scrollTrigger: {
+          trigger: "#mockup h1",
+          scroller: window,
+          start: "top 70%",
+          toggleActions: "restart none none reverse",
+        }
+      }
+    );
+
+    gsap.fromTo(
+      "#mockup .content",
+      { scale: .5, opacity: 0 },
+      {
+        scale: 1, opacity: 1, duration: .8, stagger: .15,
+        scrollTrigger: {
+          trigger: "#mockup .content",
+          scroller: window,
+          start: "top 70%",
+          toggleActions: "restart none none reverse",
+        }
+      }
+    );
+
+    // Hover animation using GSAP
+    document.querySelectorAll(".gradient-border-box").forEach((box) => {
+      box.addEventListener("mouseenter", () => {
+        gsap.to(box, { scale: 1.1, duration: 0.3 });
+      });
+
+      box.addEventListener("mouseleave", () => {
+        gsap.to(box, { scale: 1, duration: 0.3 });
+      });
+    });
+
+  });
   return (
     <section className="container" id="mockup">
           <div className='display-center'><h1 className='text-gradient heading'>Responsive & Retina website</h1></div>
           <div className="content display-center">
-            <img src='/mockup_img.png' alt='mockup image'/>
+            <img className="mockupImg" src='/mockup_img.png' alt='mockup image'/>
           </div>
     </section>
   )

@@ -141,6 +141,10 @@
 }
 
 @media (max-width: 600px) {
+  .container {
+    min-height: fit-content;
+    padding-bottom: 3rem;
+  }
   .heading {
     font-size: 3rem;
   }

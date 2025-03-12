@@ -1,11 +1,13 @@
 import emailjs from "@emailjs/browser"
-import { useRef, useState } from "react"
+import { useState } from "react"
 import { BiPhone } from "react-icons/bi"
 import { BsInstagram } from "react-icons/bs"
 import { FaLinkedinIn } from "react-icons/fa"
 import { GoLocation, GoMail } from "react-icons/go"
 import { ToastContainer } from "react-toastify"
 import { errorMessage, infoMessage, successMessage } from "../Utils"
+import { useGSAP } from "@gsap/react"
+import gsap from "gsap"
 
 const Contact = () => {
 
@@ -50,6 +52,48 @@ const Contact = () => {
                 errorMessage("Error while sending message")
             })
     }
+
+    useGSAP(() => {
+        gsap.fromTo(
+            "#contact h1",
+            { y: -30, opacity: 0 },
+            {
+                y: 0, opacity: 1, duration: .8,
+                scrollTrigger: {
+                    trigger: "#contact h1",
+                    scroller: window,
+                    start: "top 70%",
+                    toggleActions: "restart none none reverse",
+                }
+            }
+        );
+
+        gsap.fromTo("#contact .left",
+            { x: -200, opacity: 0 },
+            {
+                x: 0, opacity: 1, duration: .8,
+                scrollTrigger: {
+                    trigger: "#contact .left",
+                    scroller: window,
+                    start: "top 80%",
+                    toggleActions: "restart none none reverse",
+                }
+            }
+        )
+
+        gsap.fromTo("#contact .right",
+            { x: 200, opacity: 0 },
+            {
+                x: 0, opacity: 1, duration: .8,
+                scrollTrigger: {
+                    trigger: "#contact .right",
+                    scroller: window,
+                    start: "top 80%",
+                    toggleActions: "restart none none reverse",
+                }
+            }
+        )
+    });
 
     return (
         <section className="container" id="contact">

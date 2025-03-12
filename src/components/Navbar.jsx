@@ -28,7 +28,7 @@ const Navbar = () => {
         gsap.from("nav .logo, nav li", {
             y: -30,
             opacity: 0,
-            duration: 1,
+            duration: .8,
             delay: .5,
             stagger: .15
         })

@@ -60,6 +60,7 @@ html::-webkit-scrollbar-thumb {
 
 #root {
   width: 100vw;
+  overflow-x: hidden;
 }
 
 /* Prevent dragging images */
@@ -166,10 +167,6 @@ img {
   padding: 0.15rem;
   background: linear-gradient(to right, #f0ecfa 35%, #6a44c2 65%);
   border-radius: 0.4rem;
-  transition: all 0.4s ease-in-out;
-  &:hover {
-    scale: 1.1;
-  }
 }
 
 .box {
