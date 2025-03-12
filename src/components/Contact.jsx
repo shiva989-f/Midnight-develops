@@ -8,6 +8,9 @@ import { ToastContainer } from "react-toastify"
 import { errorMessage, infoMessage, successMessage } from "../Utils"
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+
 
 const Contact = () => {
 
@@ -61,8 +64,8 @@ const Contact = () => {
                 y: 0, opacity: 1, duration: .8,
                 scrollTrigger: {
                     trigger: "#contact h1",
-                    scroller: window,
-                    start: "top 70%",
+                    scroller: "body",
+                    start: "top 50%",
                     toggleActions: "restart none none reverse",
                 }
             }
@@ -74,8 +77,8 @@ const Contact = () => {
                 x: 0, opacity: 1, duration: .8,
                 scrollTrigger: {
                     trigger: "#contact .left",
-                    scroller: window,
-                    start: "top 80%",
+                    scroller: "body",
+                    start: "top 50%",
                     toggleActions: "restart none none reverse",
                 }
             }
@@ -87,7 +90,7 @@ const Contact = () => {
                 x: 0, opacity: 1, duration: .8,
                 scrollTrigger: {
                     trigger: "#contact .right",
-                    scroller: window,
+                    scroller: "body",
                     start: "top 80%",
                     toggleActions: "restart none none reverse",
                 }

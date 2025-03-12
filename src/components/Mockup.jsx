@@ -1,5 +1,8 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+
 
 const Mockup = () => {
   useGSAP(() => {
@@ -10,22 +13,22 @@ const Mockup = () => {
         y: 0, opacity: 1, duration: .8,
         scrollTrigger: {
           trigger: "#mockup h1",
-          scroller: window,
-          start: "top 70%",
+          scroller: "body",
+          start: "top 50%",
           toggleActions: "restart none none reverse",
         }
       }
     );
 
     gsap.fromTo(
-      "#mockup .content",
+      "#mockup .mockupImg",
       { scale: .5, opacity: 0 },
       {
         scale: 1, opacity: 1, duration: .8, stagger: .15,
         scrollTrigger: {
-          trigger: "#mockup .content",
-          scroller: window,
-          start: "top 70%",
+          trigger: "#mockup .mockupImg",
+          scroller: "body",
+          start: "top 50%",
           toggleActions: "restart none none reverse",
         }
       }

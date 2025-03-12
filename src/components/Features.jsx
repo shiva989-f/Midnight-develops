@@ -1,5 +1,8 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+
 
 const Features = () => {
     useGSAP(() => {
@@ -11,7 +14,7 @@ const Features = () => {
                 scrollTrigger: {
                     trigger: "#features h1",
                     scroller: window,
-                    start: "top 70%",
+                    start: "top 50%",
                     toggleActions: "restart none none reverse",
                 }
             }
@@ -21,11 +24,11 @@ const Features = () => {
             "#features .grid .gradient-border-box",
             { x: -100, opacity: 0 },
             {
-                x: 0, opacity: 1, duration: .8, stagger: .15,
+                x: 0, opacity: 1, duration: .8, stagger: .3,
                 scrollTrigger: {
                     trigger: "#features .grid .gradient-border-box",
                     scroller: window,
-                    start: "top 70%",
+                    start: "top 50%",
                     toggleActions: "restart none none reverse",
                 }
             }

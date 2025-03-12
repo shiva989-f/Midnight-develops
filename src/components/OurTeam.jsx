@@ -1,5 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const OurTeam = () => {
     useGSAP(() => {
@@ -10,8 +12,8 @@ const OurTeam = () => {
                 y: 0, opacity: 1, duration: .8,
                 scrollTrigger: {
                     trigger: "#our-team h1",
-                    scroller: window,
-                    start: "top 70%",
+                    scroller: "body",
+                    start: "top 50%",
                     toggleActions: "restart none none reverse",
                 }
             }
@@ -21,11 +23,11 @@ const OurTeam = () => {
             "#our-team .team-member",
             { y: 100, opacity: 0 },
             {
-                y: 0, opacity: 1, duration: .8, stagger: .15,
+                y: 0, opacity: 1, duration: .8, stagger: .3,
                 scrollTrigger: {
                     trigger: "#our-team .team-member",
-                    scroller: window,
-                    start: "top 80%",
+                    scroller: "body",
+                    start: "top 50%",
                     toggleActions: "restart none none reverse",
                 }
             }

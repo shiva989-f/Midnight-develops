@@ -1,6 +1,8 @@
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import React from 'react'
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const Services = () => {
     useGSAP(() => {
@@ -11,8 +13,8 @@ const Services = () => {
                 y: 0, opacity: 1, duration: .8,
                 scrollTrigger: {
                     trigger: "#services h1",
-                    scroller: window,
-                    start: "top 70%",
+                    scroller: "body",
+                    start: "top 50%",
                     toggleActions: "restart none none reverse",
                 }
             }
@@ -22,11 +24,11 @@ const Services = () => {
             "#services .grid .gradient-border-box",
             { x: -100, opacity: 0 },
             {
-                x: 0, opacity: 1, duration: .8, stagger: .15,
+                x: 0, opacity: 1, duration: .8, stagger: .3,
                 scrollTrigger: {
                     trigger: "#services .grid .gradient-border-box",
-                    scroller: window,
-                    start: "top 80%",
+                    scroller: "body",
+                    start: "top 50%",
                     toggleActions: "restart none none reverse",
                 }
             }

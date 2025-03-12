@@ -75,8 +75,7 @@ img {
   width: 100%;
   min-height: 100vh;
   background: linear-gradient(to bottom, #15053b, #080116, #15053b);
-  padding: 1rem 2rem;
-  padding-bottom: 4rem;
+  padding: 2rem;
 }
 
 .content {

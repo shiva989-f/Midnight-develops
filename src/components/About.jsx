@@ -1,7 +1,6 @@
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { useRef } from 'react';
 gsap.registerPlugin(ScrollTrigger)
 
 const About = () => {
@@ -15,7 +14,7 @@ const About = () => {
                     trigger: "#about h1",
                     scroller: window, // window instead of "body" for better compatibility
                     // Start from the top of #about h1 and 50% of body
-                    start: "top 70%",
+                    start: "top 50%",
                     toggleActions: "restart none none reverse",
                 }
             }
@@ -28,7 +27,7 @@ const About = () => {
                 scrollTrigger: {
                     trigger: "#about .about-text",
                     scroller: window,
-                    start: "top 70%",
+                    start: "top 50%",
                     // toggleActions: "restart pause resume reverse", // This is creating issue - pausing in between not finishing animation
                     toggleActions: "restart none none reverse", 
                 }
@@ -42,7 +41,7 @@ const About = () => {
                 scrollTrigger: {
                     trigger: "#about .images",
                     scroller: window,
-                    start: "top 70%",
+                    start: "top 50%",
                     toggleActions: "restart none none reverse",
                 }
             }
